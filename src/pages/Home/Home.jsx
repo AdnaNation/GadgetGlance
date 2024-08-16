@@ -11,11 +11,20 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
   const [brand, setBrand] = useState("");
+  const [price, setPrice] = useState("");
   const { data: phones = [], refetch } = useQuery({
-    queryKey: ["phones", itemPerPage, currentPage, search, category],
+    queryKey: [
+      "phones",
+      itemPerPage,
+      currentPage,
+      search,
+      category,
+      brand,
+      price,
+    ],
     queryFn: async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}`
+        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}`
       );
       return data;
     },
@@ -33,6 +42,10 @@ const Home = () => {
     refetch();
     setBrand(e.target.value);
   };
+  const handlePrice = (e) => {
+    refetch();
+    setPrice(e.target.value);
+  };
   return (
     <div>
       <div>
@@ -47,7 +60,7 @@ const Home = () => {
         </div>
         <div className="form-control">
           <select
-            className="input input-bordered w-full"
+            className="select select-bordered w-full"
             value={category}
             onChange={handleCategory}
           >
@@ -57,9 +70,10 @@ const Home = () => {
             <option value="watch">Watch</option>
           </select>
         </div>
+
         <div className="form-control">
           <select
-            className="input input-bordered w-full"
+            className="select select-bordered w-full"
             value={brand}
             onChange={handleBrand}
           >
@@ -68,6 +82,19 @@ const Home = () => {
             <option value="Samsung">Samsung</option>
             <option value="Oppo">Oppo</option>
             <option value="Huawei">Huawei</option>
+          </select>
+        </div>
+        <div className="form-control">
+          <select
+            className="select select-bordered w-full"
+            value={price}
+            onChange={handlePrice}
+          >
+            <option value={""}>Price Range</option>
+            <option value={"A"}>$0 - $100</option>
+            <option value={"B"}>$100 - $500</option>
+            <option value={"C"}>$500 - $1000</option>
+            <option value={"D"}>$1000 - $2000</option>
           </select>
         </div>
       </div>
