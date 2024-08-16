@@ -1,5 +1,6 @@
 [
   {
+    "category": "phone",
     "brand": "Apple",
     "phone_name": "iPhone 13 mini",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg",
@@ -7,6 +8,7 @@
     "price": "699"
   },
   {
+    "category": "phone",
     "brand": "Apple",
     "phone_name": "iPhone 13 Pro",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
@@ -14,6 +16,7 @@
     "price": "999"
   },
   {
+    "category": "phone",
     "brand": "Apple",
     "phone_name": "iPhone 13 Pro Max",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
@@ -21,6 +24,7 @@
     "price": "1099"
   },
   {
+    "category": "tab",
     "brand": "Apple",
     "phone_name": "iPad mini (2021)",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2021.jpg",
@@ -28,6 +32,7 @@
     "price": "499"
   },
   {
+    "category": "tab",
     "brand": "Apple",
     "phone_name": "iPad 10.2 (2021)",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-102-2021-.jpg",
@@ -35,6 +40,7 @@
     "price": "329"
   },
   {
+    "category": "watch",
     "brand": "Apple",
     "phone_name": "Watch Edition Series 7",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-titanium.jpg",
@@ -42,6 +48,7 @@
     "price": "799"
   },
   {
+    "category": "phone",
     "brand": "Apple",
     "phone_name": "iPhone 13",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
@@ -49,6 +56,7 @@
     "price": "799"
   },
   {
+    "category": "watch",
     "brand": "Apple",
     "phone_name": "Watch Series 7 Aluminum",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-aluminum.jpg",
@@ -56,6 +64,7 @@
     "price": "399"
   },
   {
+    "category": "watch",
     "brand": "Apple",
     "phone_name": "Watch Series 7",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-stainless-steel.jpg",
@@ -63,6 +72,7 @@
     "price": "699"
   },
   {
+    "category": "tab",
     "brand": "Apple",
     "phone_name": "iPad Pro 11 (2021)",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2021.jpg",
@@ -70,6 +80,7 @@
     "price": "799"
   },
   {
+    "category": "phone",
     "brand": "Apple",
     "phone_name": "iPhone 12 Pro Max",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg",
@@ -77,6 +88,7 @@
     "price": "1099"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy S22 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg",
@@ -84,6 +96,7 @@
     "price": "799"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy Tab S8+",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-plus.jpg",
@@ -91,6 +104,7 @@
     "price": "899"
   },
   {
+    "category": "tab",
     "brand": "Samsung",
     "phone_name": "Galaxy Tab S8 Ultra",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-ultra.jpg",
@@ -98,6 +112,7 @@
     "price": "1099"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy S22+ 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-plus-5g.jpg",
@@ -105,6 +120,7 @@
     "price": "999"
   },
   {
+    "category": "tab",
     "brand": "Samsung",
     "phone_name": "Galaxy Tab S8",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8.jpg",
@@ -112,6 +128,7 @@
     "price": "699"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy S21 FE 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-fe-5g.jpg",
@@ -119,6 +136,7 @@
     "price": "699"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy S22 Ultra 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-ultra-5g.jpg",
@@ -126,6 +144,7 @@
     "price": "1199"
   },
   {
+    "category": "tab",
     "brand": "Samsung",
     "phone_name": "Galaxy Tab A8 10.5 (2021)",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a8-105-2021-new.jpg",
@@ -133,6 +152,7 @@
     "price": "229"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy A13 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a13-5g-.jpg",
@@ -140,6 +160,7 @@
     "price": "249"
   },
   {
+    "category": "phone",
     "brand": "Samsung",
     "phone_name": "Galaxy A03 Core",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a03-core.jpg",
@@ -147,6 +168,7 @@
     "price": "129"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "Find X5",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5.jpg",
@@ -154,6 +176,7 @@
     "price": "899"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "Find X5 Pro",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-pro.jpg",
@@ -161,6 +184,7 @@
     "price": "1199"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "Find X5 Lite",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-lite.jpg",
@@ -168,6 +192,7 @@
     "price": "599"
   },
   {
+    "category": "tab",
     "brand": "Oppo",
     "phone_name": "Pad",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad.jpg",
@@ -175,6 +200,7 @@
     "price": "499"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "A76",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a36.jpg",
@@ -182,6 +208,7 @@
     "price": "229"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "Reno7 5G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7.jpg",
@@ -189,6 +216,7 @@
     "price": "449"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "A96",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a96.jpg",
@@ -196,6 +224,7 @@
     "price": "279"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "Reno6 Lite",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-lite.jpg",
@@ -203,6 +232,7 @@
     "price": "329"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "A36",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a36.jpg",
@@ -210,6 +240,7 @@
     "price": "199"
   },
   {
+    "category": "phone",
     "brand": "Oppo",
     "phone_name": "A11s",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a11s.jpg",
@@ -217,6 +248,7 @@
     "price": "149"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "Enjoy 20e",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-enjoy-20e.jpg",
@@ -224,6 +256,7 @@
     "price": "159"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "P50 Pocket",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-p50-pocket.jpg",
@@ -231,6 +264,7 @@
     "price": "1299"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "nova 8 SE 4G",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-8-se.jpg",
@@ -238,6 +272,7 @@
     "price": "349"
   },
   {
+    "category": "watch",
     "brand": "Huawei",
     "phone_name": "Watch GT 3",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-watch-gt3-new.jpg",
@@ -245,6 +280,7 @@
     "price": "249"
   },
   {
+    "category": "watch",
     "brand": "Huawei",
     "phone_name": "Watch Fit mini",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-watch-fit-mini.jpg",
@@ -252,6 +288,7 @@
     "price": "99"
   },
   {
+    "category": "watch",
     "brand": "Huawei",
     "phone_name": "Watch GT Runner",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-gt-runner.jpg",
@@ -259,6 +296,7 @@
     "price": "299"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "nova Y60",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-y60.jpg",
@@ -266,6 +304,7 @@
     "price": "179"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "nova 9 Pro",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-9-pro-5g-.jpg",
@@ -273,6 +312,7 @@
     "price": "499"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "nova 9",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-9-5g.jpg",
@@ -280,6 +320,7 @@
     "price": "399"
   },
   {
+    "category": "phone",
     "brand": "Huawei",
     "phone_name": "P50 Pro",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-p50-pro.jpg",
