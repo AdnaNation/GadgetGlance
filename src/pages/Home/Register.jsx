@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { ImSpinner3 } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/UseAuth";
 
 const Register = () => {
   const {
@@ -11,8 +12,7 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  //   const { createUser, googleLogin, updateUser, loading, setLoading } =
-  //     useAuth();
+  const { createUser, googleLogin, loading, setLoading } = useAuth();
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
