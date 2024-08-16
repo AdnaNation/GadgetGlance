@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: async () => {
+          const { data } = await axios.get("http://localhost:5000/totalPhones");
+          return data.totalPhonesCount;
+        },
       },
       {
         path: "/register",

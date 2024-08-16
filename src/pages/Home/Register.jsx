@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { ImSpinner3 } from "react-icons/im";
@@ -6,27 +7,31 @@ import Swal from "sweetalert2";
 import useAuth from "../../hooks/UseAuth";
 
 const Register = () => {
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const { createUser, googleLogin, loading, setLoading } = useAuth();
+  const { createUser, googleLogin, setLoading } = useAuth();
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    const { name, email, password } = data;
+    const { email, password } = data;
 
     try {
+      setLoadingSpinner(true);
       await createUser(email, password);
       Swal.fire("Account created successfully!");
       setLoading(false);
+      setLoadingSpinner(false);
       navigate("/");
       window.location.reload();
     } catch (error) {
       console.log(error.message);
       setLoading(false);
+      setLoadingSpinner(false);
     }
   };
 
@@ -95,7 +100,7 @@ const Register = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="font-semibold rounded px-5 py-1.5 overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-400 text-white hover:ring-indigo-600 transition-all ease-out duration-300">
-                  {!loading ? (
+                  {loadingSpinner ? (
                     <ImSpinner3 className="animate-spin mx-auto text-white size-6" />
                   ) : (
                     "Sign Up"
