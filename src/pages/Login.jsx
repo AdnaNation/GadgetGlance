@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { ImSpinner3 } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import useAuth from "../hooks/UseAuth";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
   const {
@@ -14,7 +14,7 @@ const Login = () => {
   } = useForm();
 
   const navigate = useNavigate();
-  const { googleLogin, login } = useAuth();
+  const { googleLogin, login } = useContext(AuthContext);
   const [loadingSpinner, setLoadingSpinner] = useState(false);
 
   const onSubmit = async (data) => {
