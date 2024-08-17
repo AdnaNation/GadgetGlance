@@ -26,7 +26,7 @@ const Home = () => {
     ],
     queryFn: async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
+        `https://gadget-glance-server.vercel.app/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
       );
       return data;
     },
@@ -120,21 +120,22 @@ const Home = () => {
         </div>
       </div>
       <h2 className="text-2xl text-center underline mb-2">Our Gadgets</h2>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-20">
         {phones.map((phone) => (
-          <div key={phone.phone_name} className="card glass lg:mx-20">
+          <div key={phone.phone_name} className="card pt-4 glass">
             <figure>
               <img src={phone.image} alt={phone.phone_name} />
             </figure>
             <div className="card-body">
               <h2 className="card-title mx-auto">{phone.phone_name}</h2>
-              <div className="flex text-xs md:text-xl">
+              <p>{phone.description.slice(0, 80)}...</p>
+              <div className="flex text-xs md:text-[16px]">
                 <p>Brand: {phone.brand}</p>
                 <p>Price: ${phone.price}</p>
                 <p>Rating: 4.99</p>
               </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Learn now!</button>
+                <button className="btn btn-primary">View Details</button>
               </div>
             </div>
           </div>
@@ -144,7 +145,6 @@ const Home = () => {
       <section className={`flex justify-center items-center mt-16`}>
         <Pagination
           color={"primary"}
-          isCompact
           showControls
           total={Math.ceil(totalPhonesCount / itemPerPage)}
           initialPage={1}

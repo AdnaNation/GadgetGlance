@@ -19,7 +19,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async () => {
-          const { data } = await axios.get("http://localhost:5000/totalPhones");
+          const { data } = await axios.get(
+            "https://gadget-glance-server.vercel.app/totalPhones"
+          );
           return data.totalPhonesCount;
         },
       },
