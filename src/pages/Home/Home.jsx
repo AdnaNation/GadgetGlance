@@ -2,10 +2,9 @@ import { Pagination } from "@nextui-org/react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-  const totalPhonesCount = useLoaderData();
+  const [totalPhonesCount, setTotalPhonesCount] = useState(0);
   const [itemPerPage, setItemPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
@@ -26,9 +25,10 @@ const Home = () => {
     ],
     queryFn: async () => {
       const { data } = await axios.get(
-        `https://gadget-glance-server.vercel.app/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
+        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
       );
-      return data;
+      setTotalPhonesCount(data.totalPhonesCount);
+      return data.phones;
     },
   });
 
@@ -51,6 +51,14 @@ const Home = () => {
   const handleSort = (e) => {
     refetch();
     setSort(e.target.value);
+  };
+  const handleRefresh = () => {
+    refetch();
+    setSearch("");
+    setCategory("");
+    setBrand("");
+    setPrice("");
+    setSort("");
   };
   return (
     <div>
@@ -118,6 +126,14 @@ const Home = () => {
             </select>
           </div>
         </div>
+      </div>
+      <div className="text-center">
+        <button
+          onClick={handleRefresh}
+          className=" border rounded px-2 btn-success "
+        >
+          Refresh
+        </button>
       </div>
       <h2 className="text-2xl text-center underline mb-2">Our Gadgets</h2>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-20">

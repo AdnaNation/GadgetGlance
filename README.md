@@ -1,8 +1,53 @@
-# React + Vite
+# GadgetGlance
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
 
-Currently, two official plugins are available:
+- [https://gadgetglance-e9980.web.app]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+
+GadgetGlance is a user-friendly web platform designed to streamline the management and browsing of products. It offers features like advanced search, filtering, sorting, and easy navigation, providing users with a seamless experience in exploring and managing product listings. The application combines a sleek frontend built with React.js and a robust backend powered by Node.js, Express.js, and MongoDB.
+
+## Technologies used
+
+- Tailwind-css
+- axios
+- firebase
+- react
+- mongodb
+- expressjs
+- vercel
+
+## Project Setup
+
+This repository contains the frontend of the GadgetGlance web application. The frontend is built using React.js and styled with Tailwind CSS.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your local machine:
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/AdnaNation/GadgetGlance
+
+   ```
+
+2. **Change to the Project Directory:**
+
+3. **Install Dependencies:**
+
+4. **Configure Environment Variables:**
+
+5. **Start the Development Server:**
+
+6. **Run the Application:**
+
+### Server-side repository
+
+- https://github.com/AdnaNation/GadgetGlance-server

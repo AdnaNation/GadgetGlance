@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
@@ -18,12 +17,6 @@ const router = createBrowserRouter([
             <Home></Home>
           </PrivateRoute>
         ),
-        loader: async () => {
-          const { data } = await axios.get(
-            "https://gadget-glance-server.vercel.app/totalPhones"
-          );
-          return data.totalPhonesCount;
-        },
       },
       {
         path: "/register",
