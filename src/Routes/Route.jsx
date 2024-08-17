@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Home/Register";
 import Login from "../pages/Login";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: (
+          <PrivateRoute>
+            <Home></Home>
+          </PrivateRoute>
+        ),
         loader: async () => {
           const { data } = await axios.get("http://localhost:5000/totalPhones");
           return data.totalPhonesCount;

@@ -12,6 +12,7 @@ const Home = () => {
   const [category, setCategory] = useState("");
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
+  const [sort, setSort] = useState("");
   const { data: phones = [], refetch } = useQuery({
     queryKey: [
       "phones",
@@ -21,10 +22,11 @@ const Home = () => {
       category,
       brand,
       price,
+      sort,
     ],
     queryFn: async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}`
+        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
       );
       return data;
     },
@@ -46,9 +48,13 @@ const Home = () => {
     refetch();
     setPrice(e.target.value);
   };
+  const handleSort = (e) => {
+    refetch();
+    setSort(e.target.value);
+  };
   return (
     <div>
-      <div>
+      <div className="flex gap-1 flex-col md:flex-row justify-center my-3">
         <div className="form-control">
           <input
             type="text"
@@ -58,46 +64,62 @@ const Home = () => {
             className="input input-bordered w-full"
           />
         </div>
-        <div className="form-control">
-          <select
-            className="select select-bordered w-full"
-            value={category}
-            onChange={handleCategory}
-          >
-            <option value={""}>Category</option>
-            <option value="phone">Phone</option>
-            <option value="tab">Tab</option>
-            <option value="watch">Watch</option>
-          </select>
-        </div>
+        <div className="flex flex-col md:flex-row gap-1 justify-center">
+          <div className="form-control">
+            <select
+              className="select select-bordered w-full"
+              value={category}
+              onChange={handleCategory}
+            >
+              <option value={""}>Category</option>
+              <option value="phone">Phone</option>
+              <option value="tab">Tab</option>
+              <option value="watch">Watch</option>
+            </select>
+          </div>
 
-        <div className="form-control">
-          <select
-            className="select select-bordered w-full"
-            value={brand}
-            onChange={handleBrand}
-          >
-            <option value={""}>Brand</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Oppo">Oppo</option>
-            <option value="Huawei">Huawei</option>
-          </select>
-        </div>
-        <div className="form-control">
-          <select
-            className="select select-bordered w-full"
-            value={price}
-            onChange={handlePrice}
-          >
-            <option value={""}>Price Range</option>
-            <option value={"A"}>$0 - $100</option>
-            <option value={"B"}>$100 - $500</option>
-            <option value={"C"}>$500 - $1000</option>
-            <option value={"D"}>$1000 - $2000</option>
-          </select>
+          <div className="form-control">
+            <select
+              className="select select-bordered w-full"
+              value={brand}
+              onChange={handleBrand}
+            >
+              <option value={""}>Brand</option>
+              <option value="Apple">Apple</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Oppo">Oppo</option>
+              <option value="Huawei">Huawei</option>
+            </select>
+          </div>
+          <div className="form-control">
+            <select
+              className="select select-bordered w-full"
+              value={price}
+              onChange={handlePrice}
+            >
+              <option value={""}>Price Range</option>
+              <option value={"A"}>$0 - $100</option>
+              <option value={"B"}>$100 - $500</option>
+              <option value={"C"}>$500 - $1000</option>
+              <option value={"D"}>$1000 - $2000</option>
+            </select>
+          </div>
+
+          <div className="form-control">
+            <select
+              className="select select-bordered w-full"
+              value={sort}
+              onChange={handleSort}
+            >
+              <option value={""}>Sort by:</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option>Date Added: Newest First</option>
+            </select>
+          </div>
         </div>
       </div>
+      <h2 className="text-2xl text-center underline mb-2">Our Gadgets</h2>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {phones.map((phone) => (
           <div key={phone.phone_name} className="card glass lg:mx-20">
