@@ -12,7 +12,11 @@ const Home = () => {
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
   const [sort, setSort] = useState("");
-  const { data: phones = [], refetch } = useQuery({
+  const {
+    data: phones = [],
+    refetch,
+    loading,
+  } = useQuery({
     queryKey: [
       "phones",
       itemPerPage,
@@ -25,7 +29,7 @@ const Home = () => {
     ],
     queryFn: async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
+        `https://gadget-glance-server.vercel.app/phones?page=${currentPage}&limit=${itemPerPage}&search=${search}&category=${category}&brand=${brand}&price=${price}&sort=${sort}`
       );
       setTotalPhonesCount(data.totalPhonesCount);
       return data.phones;
@@ -136,6 +140,11 @@ const Home = () => {
         </button>
       </div>
       <h2 className="text-2xl text-center underline mb-2">Our Gadgets</h2>
+      {loading && (
+        <div className="flex justify-center">
+          <span className=" loading loading-bars loading-lg"></span>
+        </div>
+      )}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-20">
         {phones.map((phone) => (
           <div key={phone.phone_name} className="card pt-4 glass">
